@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Storm Chaser VR — WebXR</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene" aria-label="Storm Chaser VR"></canvas>
+  <div id="crosshair" hidden aria-hidden="true"></div>
+
+  <div id="overlay">
+    <div class="panel">
+      <p class="kicker">WEBXR &middot; STORM CHASER &middot; QUEST READY</p>
+      <h1>STORM<span>CHASER</span></h1>
+      <p class="tagline">Intercept the supercell. Drive into the wedge, rope, cone and multi-vortex tornadoes. Read live wind speed on your in-car computer.</p>
+
+      <div class="buttons">
+        <button id="enterVr" type="button">Enter VR</button>
+        <button id="desktop" class="ghost" type="button">Desktop mode</button>
+      </div>
+      <p id="note" class="note">Checking headset support&hellip;</p>
+
+      <div class="controls">
+        <div>
+          <h2>VR</h2>
+          <p><kbd>Left stick</kbd> move &bull; <kbd>Right stick</kbd> snap turn</p>
+          <p><kbd>Trigger / Grip</kbd> enter or exit car</p>
+          <p><kbd>Inside car:</kbd> left stick drive, right stick steer</p>
+        </div>
+        <div>
+          <h2>Desktop</h2>
+          <p><kbd>WASD</kbd> move &bull; <kbd>Mouse</kbd> look &bull; <kbd>Shift</kbd> run</p>
+          <p><kbd>E</kbd> enter or exit car &bull; <kbd>WASD</kbd> drive once inside</p>
+        </div>
+      </div>
+
+      <p class="fineprint">WebXR requires HTTPS (or localhost). Use GitHub Pages / Netlify / Vercel for a public link. Works on Meta Quest, Pico, and desktop browsers.</p>
+    </div>
+  </div>
+
+  <div id="loading"><span>Chasing storms&hellip;</span></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
